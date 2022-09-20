@@ -3,11 +3,11 @@
 int main(){
 
     int buscaBinaria(int num, int *vetor, int vTam);
-    int v[500000]; //Ao adicionar mais um zero, o programa nem roda.
-    int vTam = 500000;
+    int v[5000]; //Ao adicionar mais um zero, o programa nem roda.
+    int vTam = 5000;
     int num;
 
-    for(int i = 0; i < 500000; i++){
+    for(int i = 0; i < 5000; i++){
 
         v[i] = i * 2;
     }
@@ -22,24 +22,25 @@ int main(){
 
 int buscaBinaria(int num, int *vetor, int vTam){
 
-    int esquerda = 0;
+    int esquerda = 1;
     int meio = (esquerda + vTam) /2;
 
     while(esquerda < vTam){
-    printf("iteração\n");
+
+        meio = (esquerda + vTam) /2;
+
         if(vetor[meio] > num){
 
-            vTam = meio;
-            meio = (esquerda + vTam) /2;
+            vTam = meio + 1;
         }
         else if(vetor[meio] < num){
 
                 esquerda = meio;
-                meio = (esquerda + vTam) /2;
              }
              else return meio;
 
     }
 
+    if
     return -1;
 }
