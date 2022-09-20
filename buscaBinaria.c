@@ -26,7 +26,7 @@ int buscaBinaria(int num, int *vetor, int vTam){
     int meio = (esquerda + vTam) /2;
 
     while(esquerda < vTam){
-
+    printf("iteração\n");
         if(vetor[meio] > num){
 
             vTam = meio;
